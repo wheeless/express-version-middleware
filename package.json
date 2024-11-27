@@ -1,0 +1,53 @@
+{
+  "name": "@trarn/express-version-middleware",
+  "version": "1.0.10",
+  "description": "Version middleware to make versioning express routes easier",
+  "type": "module",
+  "types": "build/index.d.ts",
+  "main": "build/index.js",
+  "files": [
+    "build",
+    "README.md",
+    "LICENSE",
+    "package.json",
+    "index.ts"
+  ],
+  "exports": {
+    "types": [
+      "./build/types/index.d.ts"
+    ],
+    "require": [
+      "./build/cjs/index.cjs"
+    ],
+    "import": [
+      "./build/esm/index.js"
+    ],
+    "default": [
+      "./build/esm/index.js"
+    ]
+  },
+  "scripts": {
+    "compile": "tsc -b ./tsconfig.cjs.json ./tsconfig.esm.json ./tsconfig.types.json && node rename-script.cjs",
+    "pub": "npm publish --access=public",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "version",
+    "versioning",
+    "express",
+    "api"
+  ],
+  "author": "Trarn",
+  "license": "MIT",
+  "dependencies": {
+    "@trarn/middleware": "^1.0.5",
+    "@types/express": "^5.0.0",
+    "@types/node": "^20.11.20",
+    "express": "^4.21.1",
+    "prettier": "^3.2.5"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  }
+}
