@@ -14,6 +14,10 @@ A flexible Express middleware for handling API versioning in Node.js application
 
 ```bash
 npm install @trarn/express-version-middleware
+
+# or
+
+yarn add @trarn/express-version-middleware
 ```
 
 ## Usage
@@ -25,6 +29,11 @@ There are two main ways to use this middleware:
 import express from 'express';
 import { versionMiddleware } from '@trarn/express-version-middleware';
 import { response } from '@trarn/middleware'; // Optional, for response handling
+
+// Or with CommonJS
+const express = require('express');
+const { versionMiddleware } = require('@trarn/express-version-middleware');
+const { response } = require('@trarn/middleware'); // Optional, for response handling
 
 const app = express();
 
@@ -45,6 +54,12 @@ app.use('/api/mail', require('./routes/mailRoute'));
 ```typescript
 import express from 'express';
 import { versionMiddleware } from '@trarn/express-version-middleware';
+import { response } from '@trarn/middleware'; // Optional, for response handling
+
+// Or with CommonJS
+const express = require('express');
+const { versionMiddleware } = require('@trarn/express-version-middleware');
+const { response } = require('@trarn/middleware'); // Optional, for response handling
 
 const app = express();
 

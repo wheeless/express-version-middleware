@@ -1,8 +1,8 @@
 import { Request, Response, NextFunction } from 'express';
-interface VersionHandler {
+export interface VersionHandler {
     (req: Request, res: Response): void;
 }
-interface VersionMap {
+export interface VersionMap {
     [version: string]: VersionHandler;
 }
 /**
